@@ -6,6 +6,10 @@ using UnityEngine;
 public class Match3 : MonoBehaviour
 {
     public ArrayLayout boardLayout;
+    private ScoreScript scoreScript;
+    public int basePieceValue = 20;
+    private int streakValue = 1;
+   
 
     [Header("UI Elements")]
     public Sprite[] pieces;
@@ -32,6 +36,7 @@ public class Match3 : MonoBehaviour
     void Start()
     {
         StartGame();
+        
     }
 
     void Update()
@@ -72,11 +77,13 @@ public class Match3 : MonoBehaviour
                     KillPiece(pnt);
                     Node node = getNodeAtPoint(pnt);
                     NodePiece nodePiece = node.getPiece();
+                    streakValue ++;
                     if (nodePiece != null)
                     {
                         nodePiece.gameObject.SetActive(false);
                         dead.Add(nodePiece);
                     }
+                    streakValue = 1;
                     node.SetPiece(null);
                 }
 
@@ -84,7 +91,8 @@ public class Match3 : MonoBehaviour
             }
 
             flipped.Remove(Flip); //Remove the flip after update
-            update.Remove(piece); 
+            update.Remove(piece);
+            
         }
     }
 
@@ -176,6 +184,7 @@ public class Match3 : MonoBehaviour
         InitializeBoard();
         VerifyBoard();
         InstantiateBoard();
+        scoreScript = FindObjectOfType<ScoreScript>();
 
     }
     void InitializeBoard()
@@ -276,9 +285,11 @@ public class Match3 : MonoBehaviour
         else
         {
             GameObject kill = GameObject.Instantiate(KilledPiece, KilledBoard);
+            scoreScript.IncreaseScore(basePieceValue * streakValue);
             KilledPiece kPiece = kill.GetComponent<KilledPiece>();
             set = kPiece;
             killed.Add(kPiece);
+            
         }
 
         int val = getValueAtPoint(p) - 1;

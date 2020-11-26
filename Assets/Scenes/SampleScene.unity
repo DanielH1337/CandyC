@@ -542,6 +542,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054bd9fceaec16f46bd7345b27b709a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 1303917595}
+  score: 0
 --- !u!114 &1303917595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,6 +647,7 @@ MonoBehaviour:
     - row: 000000000000000000
     - row: 000000000000000000
     - row: 000000000000000000
+  basePieceValue: 20
   pieces:
   - {fileID: 7086606104257924489, guid: 34f6321b206afab459fb7c8d37989456, type: 3}
   - {fileID: -7105913188517789750, guid: 34f6321b206afab459fb7c8d37989456, type: 3}
