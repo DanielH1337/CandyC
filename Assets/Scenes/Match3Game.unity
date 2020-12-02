@@ -649,11 +649,11 @@ MonoBehaviour:
     - row: 000000000000000000
   basePieceValue: 20
   pieces:
-  - {fileID: 7086606104257924489, guid: 34f6321b206afab459fb7c8d37989456, type: 3}
-  - {fileID: -7105913188517789750, guid: 34f6321b206afab459fb7c8d37989456, type: 3}
-  - {fileID: -8166966530815011495, guid: 34f6321b206afab459fb7c8d37989456, type: 3}
-  - {fileID: -488248382649040768, guid: 34f6321b206afab459fb7c8d37989456, type: 3}
-  - {fileID: 5528609633622603068, guid: 2c97df9695607b04c92ec362851a0890, type: 3}
+  - {fileID: 21300000, guid: d1767a17d09fe734d8f9d42e5b21b4cb, type: 3}
+  - {fileID: 21300000, guid: 2976cf592aa51c043b130906a0ec2f50, type: 3}
+  - {fileID: 21300000, guid: f7de517d28360aa48a392791f080fbdd, type: 3}
+  - {fileID: 21300000, guid: 3dbbec6299fde1c4cb9e542816d1e92c, type: 3}
+  - {fileID: 21300000, guid: b57aa29a709bc2e40834e2606beb15c5, type: 3}
   gameBoard: {fileID: 639762386}
   KilledBoard: {fileID: 141570977}
   nodePiece: {fileID: 4202827756859729398, guid: b21b8af49ab4d7e42b362a730ba30c7f, type: 3}
