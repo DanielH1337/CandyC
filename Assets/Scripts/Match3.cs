@@ -285,12 +285,12 @@ public class Match3 : MonoBehaviour
         else
         {
             GameObject kill = GameObject.Instantiate(KilledPiece, KilledBoard);
-            scoreScript.IncreaseScore(basePieceValue * streakValue);
             KilledPiece kPiece = kill.GetComponent<KilledPiece>();
             set = kPiece;
             killed.Add(kPiece);
             
         }
+        scoreScript.IncreaseScore(basePieceValue * streakValue);
 
         int val = getValueAtPoint(p) - 1;
         if (set != null && val >= 0 && val < pieces.Length)
