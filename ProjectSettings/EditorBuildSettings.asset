@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Match3GameScene1.unity
     guid: 2f277aa1090a62c4988e86f5d3afc847
   - enabled: 1
+    path: Assets/Scenes/Match3GameScene2.unity
+    guid: 5be0d69ba6afb0545be5a674ad3eddd2
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 6d79c44f7f6a6d840bf559d2bc519c81
   m_configObjects: {}
