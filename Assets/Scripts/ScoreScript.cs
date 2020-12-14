@@ -7,31 +7,43 @@ using UnityEngine.SceneManagement;
 public class ScoreScript : MonoBehaviour
 
 {
-
-
     public Text scoreText;
     public int score;
-    
 
-    // Start is called before the first frame update
 
 
     // Update is called once per frame
     void Update()
     {
         scoreText.text = "" + score;
-        if (score >= 1000)
+        if (score>=5000)
         {
             LoadNextLevel();
+            
         }
+      
+       
         
     }
+
+
+
     public void IncreaseScore(int amountToIncrease)
     {
         score += amountToIncrease;
     }
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene(1);
+        
     }
+    void OnDisable()
+    {
+        PlayerPrefs.SetInt("Score", score);
+    }
+    private void OnEnable()
+    {
+        score = PlayerPrefs.GetInt("Score");
+    }
+
 }
