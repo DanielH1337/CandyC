@@ -4,25 +4,25 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -3600534022250828374
-    second: sound_character_sheet_0
+    second: soundHead
   - first:
       213: 8585863742848714014
-    second: sound_character_sheet_1
+    second: soundCoatRight
   - first:
       213: 5041104655018720512
-    second: sound_character_sheet_2
+    second: soundArmLeft
   - first:
       213: -6197503726093358920
-    second: sound_character_sheet_3
+    second: soundHandRight
   - first:
       213: -6948529479679403065
-    second: sound_character_sheet_4
+    second: soundLegs
   - first:
       213: -1857503094387325657
-    second: sound_character_sheet_5
+    second: soundTorso
   - first:
       213: -3183416639023837336
-    second: sound_character_sheet_6
+    second: soundCoatLeft
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sound_character_sheet_0
+      name: soundHead
       rect:
         serializedVersion: 2
         x: 22
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sound_character_sheet_1
+      name: soundCoatRight
       rect:
         serializedVersion: 2
         x: 159
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sound_character_sheet_2
+      name: soundArmLeft
       rect:
         serializedVersion: 2
         x: 396
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sound_character_sheet_3
+      name: soundHandRight
       rect:
         serializedVersion: 2
         x: 13
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sound_character_sheet_4
+      name: soundLegs
       rect:
         serializedVersion: 2
         x: 179
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sound_character_sheet_5
+      name: soundTorso
       rect:
         serializedVersion: 2
         x: 29
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sound_character_sheet_6
+      name: soundCoatLeft
       rect:
         serializedVersion: 2
         x: 390
