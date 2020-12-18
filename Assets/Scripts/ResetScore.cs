@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class ResetScore : MonoBehaviour
 {
-    
+
+
+    private void Start()
+    {
+        Clean();
+    }
     public void Clean()
     {
         PlayerPrefs.DeleteAll();
