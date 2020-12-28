@@ -16,14 +16,8 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         scoreText.text = "" + score;
-        if (score>=5000)
-        {
-            LoadNextLevel();
-            
-        }
-      
-       
-        
+
+
     }
 
 
@@ -32,18 +26,25 @@ public class ScoreScript : MonoBehaviour
     {
         score += amountToIncrease;
     }
-    public void LoadNextLevel()
-    {
-        SceneManager.LoadScene(1);
-        
-    }
+
     void OnDisable()
     {
         PlayerPrefs.SetInt("Score", score);
     }
     private void OnEnable()
     {
+
         score = PlayerPrefs.GetInt("Score");
     }
+    public void resetvalues()
+    {
+ 
+        PlayerPrefs.DeleteAll();
+        score = 0;
+        SceneManager.LoadScene(0);
+
+    }
+
+
 
 }

@@ -33,4 +33,8 @@ public class TimerScript : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    private void OnEnable()
+    {
+        Time.timeScale = 1;
+    }
 }
