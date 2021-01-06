@@ -8,7 +8,7 @@ public class ScoreScript : MonoBehaviour
 
 {
     public Text scoreText;
-    public int score;
+    public static int score;
 
 
 
