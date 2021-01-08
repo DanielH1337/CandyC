@@ -30,11 +30,9 @@ public class TimerScript : MonoBehaviour
         else
         {
             timesUpText.SetActive(true);
-            Time.timeScale = 0;
+
+            LevelControlScript.instance.youLose();
         }
     }
-    private void OnEnable()
-    {
-        Time.timeScale = 1;
-    }
+
 }

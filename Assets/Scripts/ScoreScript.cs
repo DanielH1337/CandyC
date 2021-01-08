@@ -9,14 +9,17 @@ public class ScoreScript : MonoBehaviour
 {
     public Text scoreText;
     public static int score;
-
+    public int ScoreToBeat;
 
 
     // Update is called once per frame
     void Update()
     {
         scoreText.text = "" + score;
-
+        if (score > ScoreToBeat)
+        {
+            LevelControlScript.instance.youWin();
+        }
 
     }
 

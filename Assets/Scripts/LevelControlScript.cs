@@ -59,6 +59,6 @@ public class LevelControlScript : MonoBehaviour
 
 	void loadMainMenu()
 	{
-		SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene(0);
 	}
 }
