@@ -9,12 +9,12 @@ public class MainMenuControlScript : MonoBehaviour
 
 	public Button level02Button, level03Button;
 	int levelPassed;
-	private static int sCore;
+
 
 	// Use this for initialization
 	void Start()
 	{
-		sCore = ScoreScript.score;
+
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
 		level02Button.interactable = false;
 		level03Button.interactable = false;

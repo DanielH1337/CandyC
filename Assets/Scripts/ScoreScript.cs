@@ -42,7 +42,7 @@ public class ScoreScript : MonoBehaviour
     public void resetvalues()
     {
  
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("Score");
         score = 0;
         SceneManager.LoadScene(0);
 
