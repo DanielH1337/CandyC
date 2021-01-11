@@ -10,15 +10,32 @@ public class ScoreScript : MonoBehaviour
     public Text scoreText;
     public static int score;
     public int ScoreToBeat;
+    public bool EndScoreValue;
+    int sceneIndex;
+    public int MinusPoints;
+    public int newscore;
 
-
+    private void Start()
+    {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        EndScoreValue = true;
+    }
     // Update is called once per frame
     void Update()
     {
+        
         scoreText.text = "" + score;
+
         if (score > ScoreToBeat)
         {
+            
             LevelControlScript.instance.youWin();
+            if (sceneIndex == 3)
+            {
+                EndScoreValue = false;
+             
+            }
+            
         }
 
     }
@@ -27,7 +44,10 @@ public class ScoreScript : MonoBehaviour
 
     public void IncreaseScore(int amountToIncrease)
     {
-        score += amountToIncrease;
+        if (EndScoreValue==true)
+            score += amountToIncrease;
+        
+            
     }
 
     void OnDisable()
@@ -48,6 +68,20 @@ public class ScoreScript : MonoBehaviour
 
     }
 
+    public void  Minuspoints()
+    {
+        if (score > 0)
+        {
+
+            //score = score - MinusPoints;
+            //Debug.Log(score);
+            score = MinusPoints;
+        }
+        
+        
+    }
+
+    
 
 
 }

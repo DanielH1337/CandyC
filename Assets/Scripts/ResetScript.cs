@@ -13,8 +13,9 @@ public class ResetScript : MonoBehaviour
     public void ResetValues()
     {
         Score = FindObjectOfType<ScoreScript>();
-        Score.resetvalues();
         Invoke("loadMainMenu", 1f);
+        Score.resetvalues();
+        
     }
     void loadMainMenu()
     {
