@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ResetScript : MonoBehaviour
 {
@@ -12,6 +14,11 @@ public class ResetScript : MonoBehaviour
     {
         Score = FindObjectOfType<ScoreScript>();
         Score.resetvalues();
+        Invoke("loadMainMenu", 1f);
+    }
+    void loadMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
    

@@ -44,7 +44,7 @@ public class ScoreScript : MonoBehaviour
  
         PlayerPrefs.DeleteKey("Score");
         score = 0;
-        SceneManager.LoadScene(0);
+        
 
     }
 
