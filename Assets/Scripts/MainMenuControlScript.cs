@@ -9,6 +9,7 @@ public class MainMenuControlScript : MonoBehaviour
 
 	public Button level02Button, level03Button;
 	int levelPassed;
+	
 
 
 	// Use this for initialization

@@ -16,6 +16,7 @@ public class ResetScript : MonoBehaviour
         Invoke("loadMainMenu", 1f);
         Score.resetvalues();
         
+        
     }
     void loadMainMenu()
     {

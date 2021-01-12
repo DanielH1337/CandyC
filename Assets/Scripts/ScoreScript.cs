@@ -13,7 +13,7 @@ public class ScoreScript : MonoBehaviour
     public bool EndScoreValue;
     int sceneIndex;
     public int MinusPoints;
-    public int newscore;
+
 
     private void Start()
     {
@@ -52,7 +52,15 @@ public class ScoreScript : MonoBehaviour
 
     void OnDisable()
     {
+        if (score > 0)
+        {
+            score = score - MinusPoints;
+        }
+
+        
         PlayerPrefs.SetInt("Score", score);
+        
+
     }
     private void OnEnable()
     {
@@ -63,23 +71,11 @@ public class ScoreScript : MonoBehaviour
     {
  
         PlayerPrefs.DeleteKey("Score");
-        score = 0;
+
         
 
     }
-
-    public void  Minuspoints()
-    {
-        if (score > 0)
-        {
-
-            //score = score - MinusPoints;
-            //Debug.Log(score);
-            score = MinusPoints;
-        }
-        
-        
-    }
+    
 
     
 
