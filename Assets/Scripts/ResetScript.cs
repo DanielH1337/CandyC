@@ -17,8 +17,9 @@ public class ResetScript : MonoBehaviour
         Score.resetvalues();
         
         
+        
     }
-    void loadMainMenu()
+     void loadMainMenu()
     {
         SceneManager.LoadScene(0);
     }

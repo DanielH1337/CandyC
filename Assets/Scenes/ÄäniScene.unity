@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTime: 30
   timesUpText: {fileID: 1537519047}
+  resetbutton: {fileID: 0}
 --- !u!114 &214881875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,10 +977,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1303917595}
-  ScoreToBeat: 400
+  score: 0
+  ScoreToBeat: 1000
   EndScoreValue: 0
-  MinusPoints: 400
-  newscore: 0
+  MinusPoints: 0
+  value1: 0
+  value2: 0
 --- !u!114 &1303917595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1426,11 +1429,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5406581127710661386, guid: 2fd5bb51f71074542b395ad45f4b7ea7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 5406581127710661386, guid: 2fd5bb51f71074542b395ad45f4b7ea7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 5406581127710661386, guid: 2fd5bb51f71074542b395ad45f4b7ea7, type: 3}
       propertyPath: m_SizeDelta.x

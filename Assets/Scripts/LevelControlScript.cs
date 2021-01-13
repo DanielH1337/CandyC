@@ -13,6 +13,8 @@ public class LevelControlScript : MonoBehaviour
 	int sceneIndex, levelPassed;
 	private ScoreScript resetscore;
 	
+
+	
 	// Use this for initialization
 	void Start()
 	{
@@ -54,9 +56,8 @@ public class LevelControlScript : MonoBehaviour
 		levelSign.gameObject.SetActive(false);
 		gameOverText.gameObject.SetActive(true);
 		resetscore = FindObjectOfType<ScoreScript>();
-		Invoke("loadMainMenu", 1f);
+		Invoke("loadMainMenu",1f);
 		resetscore.resetvalues();
-
 		
 	}
 
@@ -69,6 +70,7 @@ public class LevelControlScript : MonoBehaviour
 	{
 		SceneManager.LoadScene(0);
 	}
+	
 	void resetallvalues()
     {
 		youWinText.gameObject.SetActive(true);

@@ -8,19 +8,22 @@ public class ScoreScript : MonoBehaviour
 
 {
     public Text scoreText;
-    public static int score;
+    public  int score;
     public int ScoreToBeat;
     public bool EndScoreValue;
     int sceneIndex;
-    public int MinusPoints;
-
+    public int value1;
+    public int value2;
 
     private void Start()
     {
+
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         EndScoreValue = true;
+        
+        
     }
-    // Update is called once per frame
+    // Score is updating to text object in every match3 scene
     void Update()
     {
         
@@ -28,12 +31,12 @@ public class ScoreScript : MonoBehaviour
 
         if (score > ScoreToBeat)
         {
-            
+            //When youWin method is loaded and scene is 3 score is resetted.
             LevelControlScript.instance.youWin();
             if (sceneIndex == 3)
             {
                 EndScoreValue = false;
-             
+                
             }
             
         }
@@ -41,7 +44,7 @@ public class ScoreScript : MonoBehaviour
     }
 
 
-
+    //Scorevalue is increased from match3 script
     public void IncreaseScore(int amountToIncrease)
     {
         if (EndScoreValue==true)
@@ -49,14 +52,9 @@ public class ScoreScript : MonoBehaviour
         
             
     }
-
+    //Score is subtracted when main menu is loaded
     void OnDisable()
     {
-        if (score > 0)
-        {
-            score = score - MinusPoints;
-        }
-
         
         PlayerPrefs.SetInt("Score", score);
         
@@ -69,12 +67,46 @@ public class ScoreScript : MonoBehaviour
     }
     public void resetvalues()
     {
- 
-        PlayerPrefs.DeleteKey("Score");
 
+        PlayerPrefs.DeleteKey("Score");
+        
         
 
     }
+    public void zeroscore()
+    {
+        PlayerPrefs.DeleteKey("Score");
+        score = 0;
+    }
+    public void level1scoreReset()
+    {
+        score = score - score;
+
+    }
+    public void level2scoreReset()
+    {
+        if (score - value1 >= 0)
+        {
+            score = score - value1;
+            if (score > 600)
+            {
+                score = 300;
+            }
+        }
+    }
+    public void level3scoreReset()
+    {
+        if (score - value2 >= 0)
+        {
+            score = score - value2;
+            if (score > 950)
+            {
+                score = 600;
+            }
+        }
+    }
+    
+    
     
 
     
