@@ -12,6 +12,7 @@ public class LevelControlScript : MonoBehaviour
 	GameObject levelSign, gameOverText, youWinText;
 	int sceneIndex, levelPassed;
 	private ScoreScript resetscore;
+	private TimerScript stoptime;
 	
 
 	
@@ -24,6 +25,7 @@ public class LevelControlScript : MonoBehaviour
 		else if (instance != this)
 			Destroy(gameObject);
 
+		stoptime = FindObjectOfType<TimerScript>();
 		levelSign = GameObject.Find("LevelNumber");
 		gameOverText = GameObject.Find("GameOverText");
 		youWinText = GameObject.Find("YouWinText");
@@ -47,6 +49,7 @@ public class LevelControlScript : MonoBehaviour
 				PlayerPrefs.SetInt("LevelPassed", sceneIndex);
 			levelSign.gameObject.SetActive(false);
 			youWinText.gameObject.SetActive(true);
+			stoptime.stopTime = false;
 			Invoke("loadNextLevel", 1f);
 		}
 	}
@@ -73,6 +76,8 @@ public class LevelControlScript : MonoBehaviour
 	
 	void resetallvalues()
     {
+		resetscore = FindObjectOfType<ScoreScript>();
+		stoptime.stopTime = false;
 		youWinText.gameObject.SetActive(true);
 		resetscore = FindObjectOfType<ScoreScript>();
 		resetscore.resetvalues();

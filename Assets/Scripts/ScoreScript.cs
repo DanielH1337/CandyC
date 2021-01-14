@@ -12,8 +12,8 @@ public class ScoreScript : MonoBehaviour
     public int ScoreToBeat;
     public bool EndScoreValue;
     int sceneIndex;
-    public int value1;
-    public int value2;
+    public int RetryMinus1;
+    public int RetryMinus2;
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class ScoreScript : MonoBehaviour
         {
             //When youWin method is loaded and scene is 3 score is resetted.
             LevelControlScript.instance.youWin();
-            if (sceneIndex == 3)
+            if (sceneIndex == 3||sceneIndex==2||sceneIndex==1)
             {
                 EndScoreValue = false;
                 
@@ -85,9 +85,9 @@ public class ScoreScript : MonoBehaviour
     }
     public void level2scoreReset()
     {
-        if (score - value1 >= 0)
+        if (score - RetryMinus1 >= 0)
         {
-            score = score - value1;
+            score = score - RetryMinus1;
             if (score > 600)
             {
                 score = 300;
@@ -96,9 +96,9 @@ public class ScoreScript : MonoBehaviour
     }
     public void level3scoreReset()
     {
-        if (score - value2 >= 0)
+        if (score - RetryMinus1 >= 0)
         {
-            score = score - value2;
+            score = score - RetryMinus2;
             if (score > 950)
             {
                 score = 600;

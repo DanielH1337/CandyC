@@ -18,13 +18,12 @@ public class MainMenuControlScript : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
 		level02Button.interactable = false;
 		level02Button.gameObject.SetActive(false);
 		level03Button.interactable = false;
 		level03Button.gameObject.SetActive(false);
-
+		PlayerPrefs.DeleteAll();
 		
 
 		switch (levelPassed)

@@ -225,6 +225,7 @@ MonoBehaviour:
   maxTime: 30
   timesUpText: {fileID: 1537519047}
   resetbutton: {fileID: 0}
+  stopTime: 0
 --- !u!114 &214881875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,7 +981,6 @@ MonoBehaviour:
   score: 0
   ScoreToBeat: 1000
   EndScoreValue: 0
-  MinusPoints: 0
   value1: 0
   value2: 0
 --- !u!114 &1303917595
@@ -1101,7 +1101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -715, y: -622}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1951852181 stripped

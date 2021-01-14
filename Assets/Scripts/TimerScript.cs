@@ -10,16 +10,17 @@ public class TimerScript : MonoBehaviour
     public float maxTime = 5f;
     float timelLeft;
     public GameObject timesUpText;
-    private ResetScript button;
     public GameObject resetbutton;
+    public bool stopTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        timesUpText.SetActive(false);
+        //timesUpText.SetActive(false);
         timerBar = GetComponent<Image>();
         timelLeft = maxTime;
         resetbutton = GameObject.Find("ResetButton");
+        stopTime = true;
     }
 
     // Update is called once per frame
@@ -27,13 +28,17 @@ public class TimerScript : MonoBehaviour
     {
         if (timelLeft > 0)
         {
-            timelLeft -= Time.deltaTime;
-            timerBar.fillAmount = timelLeft / maxTime;
+            if( stopTime == true)
+            {
+                timelLeft -= Time.deltaTime;
+                timerBar.fillAmount = timelLeft / maxTime;
+            }
+                
         }
         else
         {
             
-            timesUpText.SetActive(true);
+            //timesUpText.SetActive(true);
             LevelControlScript.instance.youLose();
             
         }
