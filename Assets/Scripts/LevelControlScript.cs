@@ -13,7 +13,6 @@ public class LevelControlScript : MonoBehaviour
 	int sceneIndex, levelPassed;
 	private ScoreScript resetscore;
 	private TimerScript stoptime;
-	private LivesScript life;
 
 	
 	// Use this for initialization

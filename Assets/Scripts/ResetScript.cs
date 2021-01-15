@@ -9,6 +9,7 @@ public class ResetScript : MonoBehaviour
 
 
     private ScoreScript Score;
+    private MainMenuControlScript reset;
     // Start is called before the first frame update
     public void ResetValues()
     {

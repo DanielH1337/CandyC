@@ -18,6 +18,7 @@ public class MainMenuControlScript : MonoBehaviour
 	void Start()
 	{
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
+		Debug.Log(levelPassed);
 		level02Button.interactable = false;
 		level02Button.gameObject.SetActive(false);
 		level03Button.interactable = false;
@@ -53,6 +54,7 @@ public class MainMenuControlScript : MonoBehaviour
 		level02Button.gameObject.SetActive(false);
 		level03Button.interactable = false;
 		level03Button.gameObject.SetActive(false);
+		SceneManager.LoadScene(0);
 		PlayerPrefs.DeleteAll();
 	}
 	public void resetscore()
