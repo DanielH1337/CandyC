@@ -5,25 +5,36 @@ using UnityEngine.UI;
 
 public class LivesScript : MonoBehaviour
 {
-    private MainMenuControlScript lives;
-    public Text Lives;
-    int livecontainer;
+    public Text Lifes;
+    public int lifes=1;
+    public static int LoseLife=1;
     // Start is called before the first frame update
     void Start()
     {
-        lives = FindObjectOfType<MainMenuControlScript>();
-        livecontainer = lives.lives;
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
 
-        Lives.text = "Yritykset: " + livecontainer;
+        lifes = lifes * LoseLife;
+        Lifes.text = "Yritykset: " + lifes ;
+       
+
     }
-    public void lifereset()
+    void Disable()
     {
-        livecontainer = livecontainer + 1;
+        PlayerPrefs.SetInt("LoseLife",LoseLife);
     }
+    void OnEnable()
+    {
+        PlayerPrefs.GetInt("LoseLife", LoseLife);
+    }
+    public void loselifefunction()
+    {
+       LoseLife = 0;
+    }
+    
 }

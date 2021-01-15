@@ -12,7 +12,6 @@ public class MainMenuControlScript : MonoBehaviour
 	
 	
 	private ScoreScript zerovalue;
-	public int lives = 3;
 
 
 	// Use this for initialization
@@ -23,8 +22,8 @@ public class MainMenuControlScript : MonoBehaviour
 		level02Button.gameObject.SetActive(false);
 		level03Button.interactable = false;
 		level03Button.gameObject.SetActive(false);
-		PlayerPrefs.DeleteAll();
-		lives = lives - 1;
+		//PlayerPrefs.DeleteAll();
+
 		
 
 		switch (levelPassed)
