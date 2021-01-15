@@ -135,6 +135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1159252590477221504, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1607302663287294189, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
       propertyPath: m_Name
       value: ArtistCharacter 1
