@@ -38,7 +38,7 @@ public class LevelControlScript : MonoBehaviour
 
 	public void youWin()
 	{
-		if (sceneIndex == 4)
+		if (sceneIndex == 5)
 			resetallvalues();
 
 
@@ -46,7 +46,7 @@ public class LevelControlScript : MonoBehaviour
 		{
 			if (levelPassed < sceneIndex)
 				PlayerPrefs.SetInt("LevelPassed", sceneIndex);
-			levelSign.gameObject.SetActive(false);
+			//levelSign.gameObject.SetActive(false);
 			youWinText.gameObject.SetActive(true);
 			stoptime.stopTime = false;
 			Invoke("loadNextLevel", 1f);
@@ -55,9 +55,10 @@ public class LevelControlScript : MonoBehaviour
 
 	public void youLose()
 	{
-		levelSign.gameObject.SetActive(false);
+		//levelSign.gameObject.SetActive(false);
 		gameOverText.gameObject.SetActive(true);
 		resetscore = FindObjectOfType<ScoreScript>();
+		resetscore.EndScoreValue = false;
 		Invoke("loadMainMenu",1f);
 		resetscore.resetvalues();
 	}

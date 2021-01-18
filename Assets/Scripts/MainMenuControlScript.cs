@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuControlScript : MonoBehaviour
 {
 
-	public Button level02Button, level03Button;
+	public Button level02Button, level03Button,level04Button;
 	int levelPassed;
 	
 	
@@ -23,6 +23,9 @@ public class MainMenuControlScript : MonoBehaviour
 		level02Button.gameObject.SetActive(false);
 		level03Button.interactable = false;
 		level03Button.gameObject.SetActive(false);
+		level04Button.interactable = false;
+		level04Button.gameObject.SetActive(false);
+
 		//PlayerPrefs.DeleteAll();
 
 		
@@ -39,6 +42,15 @@ public class MainMenuControlScript : MonoBehaviour
 				level03Button.interactable = true;
 				level03Button.gameObject.SetActive(true);
 				break;
+			case 3:
+				level02Button.interactable = true;
+				level02Button.gameObject.SetActive(true);
+				level03Button.interactable = true;
+				level03Button.gameObject.SetActive(true);
+				level04Button.interactable = true;
+				level04Button.gameObject.SetActive(true);
+				break;
+
 		}
 	}
 
@@ -54,7 +66,9 @@ public class MainMenuControlScript : MonoBehaviour
 		level02Button.gameObject.SetActive(false);
 		level03Button.interactable = false;
 		level03Button.gameObject.SetActive(false);
-		SceneManager.LoadScene(0);
+		level04Button.interactable = false;
+		level04Button.gameObject.SetActive(false);
+		Invoke("loadMain", 1f);
 		PlayerPrefs.DeleteAll();
 	}
 	public void resetscore()
@@ -62,4 +76,8 @@ public class MainMenuControlScript : MonoBehaviour
 		zerovalue = FindObjectOfType<ScoreScript>();
 		zerovalue.zeroscore();
 	}
+	public void loadMain()
+    {
+		SceneManager.LoadScene(0);
+    }
 }

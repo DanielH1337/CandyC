@@ -1168,10 +1168,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1303917595}
   score: 0
-  ScoreToBeat: 600
+  ScoreToBeat: 800
   EndScoreValue: 0
-  RetryMinus1: 0
+  RetryMinus1: 50
   RetryMinus2: 0
+  RetryMinus3: 0
 --- !u!114 &1303917595
 MonoBehaviour:
   m_ObjectHideFlags: 0
