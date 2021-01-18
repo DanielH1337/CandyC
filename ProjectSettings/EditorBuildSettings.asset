@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Koodariscene.unity
     guid: b24afbdbf2fa5704e8842c4fbef9db36
   - enabled: 1
-    path: "Assets/Scenes/\xC4\xE4niScene.unity"
+    path: Assets/Scenes/Markkinointi.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
