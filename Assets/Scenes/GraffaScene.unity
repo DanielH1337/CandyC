@@ -145,11 +145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8534107691162274162, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9
+      value: -12.51
       objectReference: {fileID: 0}
     - target: {fileID: 8534107691162274162, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 8534107691162274162, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -186,6 +186,18 @@ PrefabInstance:
     - target: {fileID: 8534107691162274162, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534107691162274162, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534107691162274162, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534107691162274162, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff522c262694fa84b82d1ee1c7e7dcf4, type: 3}
@@ -1494,6 +1506,18 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 3a82932f16dca084baa18f2ae6cfa0d0, type: 3}
+    - target: {fileID: 7033500310895910236, guid: 3fa1fa60ee63d1c498f7b815d276e90b, type: 3}
+      propertyPath: m_Text
+      value: You Win!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033500310895910236, guid: 3fa1fa60ee63d1c498f7b815d276e90b, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033500310895910236, guid: 3fa1fa60ee63d1c498f7b815d276e90b, type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7033500310895910237, guid: 3fa1fa60ee63d1c498f7b815d276e90b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

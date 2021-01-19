@@ -370,6 +370,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 3a82932f16dca084baa18f2ae6cfa0d0, type: 3}
+    - target: {fileID: 7033500310895910236, guid: 3fa1fa60ee63d1c498f7b815d276e90b, type: 3}
+      propertyPath: m_Text
+      value: You Win!
+      objectReference: {fileID: 0}
     - target: {fileID: 7033500310895910237, guid: 3fa1fa60ee63d1c498f7b815d276e90b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
