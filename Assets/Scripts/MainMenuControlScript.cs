@@ -50,6 +50,7 @@ public class MainMenuControlScript : MonoBehaviour
 				level04Button.interactable = true;
 				level04Button.gameObject.SetActive(true);
 				break;
+			
 
 		}
 	}

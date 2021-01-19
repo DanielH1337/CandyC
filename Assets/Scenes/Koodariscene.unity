@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52672da70046c8343bc15f8892225e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 10
+  maxTime: 60
   timesUpText: {fileID: 1537519047}
   resetbutton: {fileID: 0}
   stopTime: 0
@@ -1176,9 +1176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1303917595}
   score: 0
-  ScoreToBeat: 800
+  ScoreToBeat: 2000
   EndScoreValue: 0
-  RetryMinus1: 50
+  RetryMinus1: 0
   RetryMinus2: 0
   RetryMinus3: 0
 --- !u!114 &1303917595
@@ -1718,9 +1718,9 @@ MonoBehaviour:
     - row: 000000000000000000
     - row: 000000000000000000
     - row: 000000000000000000
-    - row: 000000000000000000
-    - row: 000000000000000000
-    - row: 000000000000000000
+    - row: 000000010101000000
+    - row: 000000010101000000
+    - row: 000000010101000000
     - row: 000000000000000000
     - row: 000000000000000000
     - row: 000000000000000000

@@ -89,9 +89,9 @@ public class ScoreScript : MonoBehaviour
         if (score - RetryMinus1 >= 0)
         {
             score = score - RetryMinus1;
-            if (score > 600)
+            if (score > 1500)
             {
-                score = 300;
+                score = 800;
             }
         }
     }
@@ -100,9 +100,9 @@ public class ScoreScript : MonoBehaviour
         if (score - RetryMinus2 >= 0)
         {
             score = score - RetryMinus2;
-            if (score > 950)
+            if (score > 2000)
             {
-                score = 600;
+                score = 1500;
             }
         }
     }
@@ -111,9 +111,9 @@ public class ScoreScript : MonoBehaviour
         if (score - RetryMinus3 >= 0)
         {
             score = score - RetryMinus3;
-            if (score > 1200)
+            if (score > 3000)
             {
-                score=800;
+                score = 2000;
             }
         }
     }
