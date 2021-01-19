@@ -32,7 +32,7 @@ public class ScoreScript : MonoBehaviour
 
         if (score > ScoreToBeat)
         {
-            //When youWin method is loaded and scene is 3 score is resetted.
+            //When youWin method is loaded and scene is 3 score is stopped.
             LevelControlScript.instance.youWin();
             if (sceneIndex==4||sceneIndex == 3||sceneIndex==2||sceneIndex==1)
             {
