@@ -93,6 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 664597438340857496}
+  score: 0
   ScoreToBeat: 200
   EndScoreValue: 0
-  MinusPoints: 10
+  RetryMinus1: 0
+  RetryMinus2: 0
+  RetryMinus3: 0
