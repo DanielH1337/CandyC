@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ScoreScript : MonoBehaviour
 
 {
-    public Text scoreText;
+   // public Text scoreText;
     public  int score;
     public int ScoreToBeat;
     public bool EndScoreValue;
@@ -15,20 +15,38 @@ public class ScoreScript : MonoBehaviour
     public int RetryMinus1;
     public int RetryMinus2;
     public int RetryMinus3;
+    public int displayScore;
+    public Text scoreUI;
 
     private void Start()
     {
 
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         EndScoreValue = true;
+        //score=0;
+        displayScore =0+score;
+        StartCoroutine(ScoreUpdater());
         
-        
+    }
+
+    private IEnumerator ScoreUpdater()
+    {
+        while (true)
+        {
+            if (displayScore < score)
+            {
+                
+                displayScore ++;
+                scoreUI.text = "" + displayScore;
+            }
+            yield return new WaitForSeconds(0.007f);
+        }
     }
     // Score is updating to text object in every match3 scene
     void Update()
     {
         
-        scoreText.text = "" + score;
+        //scoreText.text = "" + score;
 
         if (score > ScoreToBeat)
         {
@@ -58,6 +76,8 @@ public class ScoreScript : MonoBehaviour
     {
         
         PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.SetInt("displayscore", displayScore);
+        
         
 
     }
@@ -65,6 +85,10 @@ public class ScoreScript : MonoBehaviour
     {
 
         score = PlayerPrefs.GetInt("Score");
+        displayScore = PlayerPrefs.GetInt("displayscore");
+        scoreUI.text = "" + score;
+        Debug.Log(displayScore);
+        
     }
     public void resetvalues()
     {

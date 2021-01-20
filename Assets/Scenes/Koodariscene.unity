@@ -449,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7803154854780115348, guid: 07abe6d55eaddf3479d1d1b9bcdaa923, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7803154854780115348, guid: 07abe6d55eaddf3479d1d1b9bcdaa923, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -736,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4916987447923628258, guid: 6fff055140b2f6e479c3cd7ab22fc9e4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4916987447923628258, guid: 6fff055140b2f6e479c3cd7ab22fc9e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1040,10 +1040,10 @@ RectTransform:
   - {fileID: 141570977}
   - {fileID: 1303917593}
   - {fileID: 1537519050}
+  - {fileID: 133984552}
   - {fileID: 130117119}
   - {fileID: 1816187164}
   - {fileID: 284836765}
-  - {fileID: 133984552}
   - {fileID: 1187082418}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1388,13 +1388,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054bd9fceaec16f46bd7345b27b709a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1303917595}
+  scoreText: {fileID: 0}
   score: 0
   ScoreToBeat: 2000
   EndScoreValue: 0
   RetryMinus1: 0
   RetryMinus2: 0
   RetryMinus3: 0
+  displayScore: 0
+  scoreUI: {fileID: 1303917595}
 --- !u!114 &1303917595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,7 +1726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7033500310895910237, guid: 3fa1fa60ee63d1c498f7b815d276e90b, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7033500310895910237, guid: 3fa1fa60ee63d1c498f7b815d276e90b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2012,7 +2014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5406581127710661386, guid: 2fd5bb51f71074542b395ad45f4b7ea7, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5406581127710661386, guid: 2fd5bb51f71074542b395ad45f4b7ea7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -70,13 +70,13 @@ public class MainMenuControlScript : MonoBehaviour
 
 		public void resetPlayerPrefs()
 	{
+		//loadMain();
 		level02Button.interactable = false;
 		level02Button.gameObject.SetActive(false);
 		level03Button.interactable = false;
 		level03Button.gameObject.SetActive(false);
 		level04Button.interactable = false;
 		level04Button.gameObject.SetActive(false);
-		loadMain();
 		PlayerPrefs.DeleteAll();
 	}
 	public void resetscore()
@@ -87,5 +87,10 @@ public class MainMenuControlScript : MonoBehaviour
 	public void loadMain()
     {
 		StartCoroutine(LoadLevel(0));
+    }
+	public void ResetPlayerprefsDelayed()
+    {
+		loadMain();
+		Invoke("resetPlayerPrefs", 1f);
     }
 }

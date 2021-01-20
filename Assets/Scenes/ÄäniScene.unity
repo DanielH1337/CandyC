@@ -1436,13 +1436,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054bd9fceaec16f46bd7345b27b709a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1303917595}
+  scoreText: {fileID: 0}
   score: 0
   ScoreToBeat: 2600
   EndScoreValue: 0
   RetryMinus1: 0
   RetryMinus2: 0
   RetryMinus3: 0
+  displayScore: 0
+  scoreUI: {fileID: 1303917595}
 --- !u!114 &1303917595
 MonoBehaviour:
   m_ObjectHideFlags: 0
