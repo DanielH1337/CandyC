@@ -13,7 +13,8 @@ public class LevelControlScript : MonoBehaviour
 	int sceneIndex, levelPassed;
 	private ScoreScript resetscore;
 	private TimerScript stoptime;
-
+	public Animator transition;
+	public float transitionTime = 1f;
 	
 	// Use this for initialization
 	void Start()
@@ -49,7 +50,7 @@ public class LevelControlScript : MonoBehaviour
 			//levelSign.gameObject.SetActive(false);
 			youWinText.gameObject.SetActive(true);
 			stoptime.stopTime = false;
-			Invoke("loadNextLevel", 1f);
+			loadNextLevel();
 		}
 	}
 
@@ -59,18 +60,24 @@ public class LevelControlScript : MonoBehaviour
 		gameOverText.gameObject.SetActive(true);
 		resetscore = FindObjectOfType<ScoreScript>();
 		resetscore.EndScoreValue = false;
-		Invoke("loadMainMenu",1f);
+		loadMainMenu();
 		resetscore.resetvalues();
 	}
 
 	void loadNextLevel()
 	{
-		SceneManager.LoadScene(sceneIndex + 1);
+		StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 	}
+	IEnumerator LoadLevel(int indexlevel)
+    {
+		transition.SetTrigger("Start");
+		yield return new WaitForSeconds(transitionTime);
+		SceneManager.LoadScene(indexlevel);
+    }
 
 	void loadMainMenu()
 	{
-		SceneManager.LoadScene(0);
+		StartCoroutine(LoadLevel(0));
 	}
 	
 	void resetallvalues()
@@ -81,6 +88,6 @@ public class LevelControlScript : MonoBehaviour
 		resetscore = FindObjectOfType<ScoreScript>();
 		resetscore.resetvalues();
 		PlayerPrefs.DeleteAll();
-		Invoke("loadMainMenu", 1f);
+		loadMainMenu();
 	}
 }

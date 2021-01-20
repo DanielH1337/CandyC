@@ -9,8 +9,9 @@ public class MainMenuControlScript : MonoBehaviour
 
 	public Button level02Button, level03Button,level04Button;
 	int levelPassed;
-	
-	
+
+	public Animator transition;
+	public float transitionTime = 1f;
 	private ScoreScript zerovalue;
 
 
@@ -58,10 +59,16 @@ public class MainMenuControlScript : MonoBehaviour
 	public void levelToLoad(int level)
 	{
 
-		SceneManager.LoadScene(level);
+		StartCoroutine(LoadLevel(level));
+	}
+	IEnumerator LoadLevel(int indexlevel)
+	{
+		transition.SetTrigger("Start");
+		yield return new WaitForSeconds(transitionTime);
+		SceneManager.LoadScene(indexlevel);
 	}
 
-	public void resetPlayerPrefs()
+		public void resetPlayerPrefs()
 	{
 		level02Button.interactable = false;
 		level02Button.gameObject.SetActive(false);
@@ -69,7 +76,7 @@ public class MainMenuControlScript : MonoBehaviour
 		level03Button.gameObject.SetActive(false);
 		level04Button.interactable = false;
 		level04Button.gameObject.SetActive(false);
-		Invoke("loadMain", 1f);
+		loadMain();
 		PlayerPrefs.DeleteAll();
 	}
 	public void resetscore()
@@ -79,6 +86,6 @@ public class MainMenuControlScript : MonoBehaviour
 	}
 	public void loadMain()
     {
-		SceneManager.LoadScene(0);
+		StartCoroutine(LoadLevel(0));
     }
 }
