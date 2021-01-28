@@ -28,7 +28,7 @@ public class ScoreScript : MonoBehaviour
         StartCoroutine(ScoreUpdater());
         
     }
-
+    //score is updated to scorecounter incrementally between 0.007seconds
     private IEnumerator ScoreUpdater()
     {
         while (true)
