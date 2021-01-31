@@ -15,7 +15,8 @@ public class LevelControlScript : MonoBehaviour
 	private TimerScript stoptime;
 	public Animator transition;
 	public float transitionTime = 1f;
-	
+	GameObject virus1, virus2;
+	float time=0.0f;
 	// Use this for initialization
 	void Start()
 	{
@@ -34,12 +35,32 @@ public class LevelControlScript : MonoBehaviour
 
 		sceneIndex = SceneManager.GetActiveScene().buildIndex;
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
+		if (sceneIndex == 5)
+        {
+			time = time+Time.deltaTime;
+			virus1 = GameObject.Find("virusEnemy 1");
+			virus2 = GameObject.Find("virusEnemy 2");
+			virus1.gameObject.SetActive(true);
+			virus2.gameObject.SetActive(false);
+			
+        }
 
 	}
+	void Update()
+    {
+		if (sceneIndex == 5)
+        {
+            if (time == 10.0f)
+            {
+				virus1.gameObject.SetActive(false);
+				virus2.gameObject.SetActive(true);
+			}
+        }
+    }
 
 	public void youWin()
 	{
-		if (sceneIndex == 5)
+		if (sceneIndex == 6)
 			resetallvalues();
 
 

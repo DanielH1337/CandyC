@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Markkinointi.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/BossScene.unity
+    guid: e5f47f0a503def94b94136333eb88236
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: a273cd7e85fd7004785b59f4e736e005
   m_configObjects: {}

@@ -17,15 +17,22 @@ public class ScoreScript : MonoBehaviour
     public int RetryMinus3;
     public int displayScore;
     public Text scoreUI;
+   
 
     private void Start()
     {
 
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         EndScoreValue = true;
-        //score=0;
         displayScore =0+score;
         StartCoroutine(ScoreUpdater());
+        if (sceneIndex == 5)
+        {
+            StartCoroutine(ScoreReducer());
+            StartCoroutine(ScoreReduce());
+        } 
+        
+       
         
     }
     //score is updated to scorecounter incrementally between 0.007seconds
@@ -42,6 +49,18 @@ public class ScoreScript : MonoBehaviour
             yield return new WaitForSeconds(0.007f);
         }
     }
+    private IEnumerator ScoreReducer()
+    {
+        while (true)
+        {
+            if (displayScore > score)
+            {
+                displayScore--;
+                scoreUI.text = "" + displayScore;
+            }
+            yield return new WaitForSeconds(0.007f);
+        }
+    }
     // Score is updating to text object in every match3 scene
     void Update()
     {
@@ -52,14 +71,27 @@ public class ScoreScript : MonoBehaviour
         {
             //When youWin method is loaded and scene is 3 score is stopped.
             LevelControlScript.instance.youWin();
-            if (sceneIndex==4||sceneIndex == 3||sceneIndex==2||sceneIndex==1)
+            if (sceneIndex==5||sceneIndex==4||sceneIndex == 3||sceneIndex==2||sceneIndex==1)
             {
                 EndScoreValue = false;
+                
                 
             }
             
         }
 
+    }
+    IEnumerator ScoreReduce()
+    {
+        score = score - 100;
+        yield return new WaitForSeconds(10f);
+        score = score - 100;
+        yield return new WaitForSeconds(10f);
+        score = score - 100;
+        yield return new WaitForSeconds(10f);
+        score = score - 100;
+        yield return new WaitForSeconds(10f);
+        score = score - 100;
     }
 
 
