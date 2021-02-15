@@ -85,13 +85,15 @@ public class ScoreScript : MonoBehaviour
     {
         score = score - 100;
         yield return new WaitForSeconds(10f);
-        score = score - 100;
+        score = score - 150;
         yield return new WaitForSeconds(10f);
-        score = score - 100;
+        score = score - 200;
         yield return new WaitForSeconds(10f);
-        score = score - 100;
+        score = score - 150;
         yield return new WaitForSeconds(10f);
-        score = score - 100;
+        score = score - 150;
+        yield return new WaitForSeconds(10f);
+        score = score - 1000;
     }
 
 

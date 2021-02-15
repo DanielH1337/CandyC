@@ -14,9 +14,10 @@ public class LevelControlScript : MonoBehaviour
 	private ScoreScript resetscore;
 	private TimerScript stoptime;
 	public Animator transition;
+	public Animator virusanimation;
 	public float transitionTime = 1f;
 	GameObject virus1, virus2;
-	float time=0.0f;
+	public float time=0.00f;
 	// Use this for initialization
 	void Start()
 	{
@@ -37,25 +38,49 @@ public class LevelControlScript : MonoBehaviour
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
 		if (sceneIndex == 5)
         {
-			time = time+Time.deltaTime;
 			virus1 = GameObject.Find("virusEnemy 1");
 			virus2 = GameObject.Find("virusEnemy 2");
-			virus1.gameObject.SetActive(true);
-			virus2.gameObject.SetActive(false);
+			//virus1.gameObject.SetActive(true);
+			//virus2.gameObject.SetActive(false);
 			
         }
 
 	}
 	void Update()
     {
-		if (sceneIndex == 5)
+		time = time + Time.deltaTime;
+		Debug.Log(time);
+        if (sceneIndex == 5)
         {
-            if (time == 10.0f)
+			virus2.transform.position = new Vector3(14.15f, 1.05f, -1652.5f);
+            if (time > 10.00f)
             {
-				virus1.gameObject.SetActive(false);
-				virus2.gameObject.SetActive(true);
-			}
+				virus1.transform.position = new Vector3(-11f, 1f, -1652.5f);
+				virus2.transform.position = new Vector3(7.46f, 1.05f, -1652.5f);
+            }
+            if (time > 20.00f)
+            {
+				virus1.transform.position = new Vector3(-4.21f, -2.16f, -1652.5f);
+				virus2.transform.position = new Vector3(14.15f, 1.05f, -1652.5f);
+            }
+            if (time > 30.00f)
+            {
+				virus1.transform.position = new Vector3(-11f, 1f, -1652.5f);
+				virus2.transform.position = new Vector3(7.46f, 3.26f, -1652.5f);
+            }
+            if (time > 40.00f)
+            {
+				virus1.transform.position = new Vector3(-4.21f, 3.28f, -1652.5f);
+				virus2.transform.position = new Vector3(14.15f, 1.05f, -1652.5f);
+            }
+			if(time > 50.00f)
+            {
+				virus1.transform.position = new Vector3(-11f, 1.05f, -1652.5f);
+				virus2.transform.position = new Vector3(7.46f, -1.55f, -1652.5f);
+            }
         }
+		
+		
     }
 
 	public void youWin()
